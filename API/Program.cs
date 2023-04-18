@@ -31,7 +31,7 @@ try
     await context.Database.MigrateAsync();
     await Seed.SeedUsers(context);
 }
-catch (Exception ex)
+catch (Exception)
 {
     
     var logger = services.GetService<ILogger<Program>>();
