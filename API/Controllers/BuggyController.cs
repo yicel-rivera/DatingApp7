@@ -21,14 +21,14 @@ namespace API.Controllers
 
         [HttpGet("not-found")]
         public ActionResult<User> GetNotFound(){
-            var thing = _context.User.Find(-1);
+            var thing = _context.Users.Find(-1);
             if(thing == null) return NotFound();
             return thing;
         }
 
         [HttpGet("server-error")]
         public ActionResult<string> GetServerError(){
-            var thing = _context.User.Find(-1);
+            var thing = _context.Users.Find(-1);
             var thingToReturn = thing.ToString();
             return thingToReturn;
         }
