@@ -63,6 +63,7 @@ export class NavComponent implements OnInit {
       next: _ => {
         this.route.navigateByUrl('/members');
         this.loadMember();
+        this.model = {};
     }
     }
     )
